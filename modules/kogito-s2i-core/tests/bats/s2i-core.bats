@@ -57,7 +57,8 @@ teardown() {
 
 @test "test assemble_runtime no binaries" {
     run assemble_runtime
-    [ "$status" -eq 0 ]
+    echo "result= ${lines[@]}"
+    [ "$status" -eq 1 ]
 }
 
 @test "test runtime_assemble" {
